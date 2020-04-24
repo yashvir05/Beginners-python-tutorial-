@@ -8,6 +8,7 @@
 import sys, re
 import argparse
 import os, configparser
+from math import factorial
 
 user_config_dir = os.path.expanduser("~") + "/.meraki_tools"
 user_config = user_config_dir + "/default_config.ini"
@@ -33,3 +34,14 @@ with open('default_config.ini', 'r') as f:
 config = configparser.ConfigParser()
 e = config.read('/default_config.ini')
 print(e)
+
+a = dict(boo='bharti' , booboo= 'yash')
+for key in a:
+    print(f'{key}  => {a[key]}')
+f = [str(factorial(x)) for x in range(1,20)]  # comprehension
+print(f)
+f = [len(str(factorial(x))) for x in range(1,20)]
+print(f)
+
+for i in range(2,3):
+   # print(i)
